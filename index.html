@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>How you can read tweets without reading?</title>
+		<meta name="description" content="Amazing twitter voice reader, using text to speach engine" />
+		<meta name="keywords" content="twitter, tweets, text to speach, tts, frontend, javascript, html5, voice reader, android, mobile">
+		<link rel="shortcut icon" href="assets/images/favicon.ico"/>
+		<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+		<link href="assets/styles/main.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0">
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-sm">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        <h4 class="modal-title" id="myModalLabel"><strong>Share</strong></h4>
+		      </div>
+		      <div class="modal-body">
+					<ul class="list-group">
+					  <li class="list-group-item" data-share="feedback">
+							<i class="fa fa-comments-o fa-lg"></i> Any feedback??
+					  </li>
+					  <li class="list-group-item" data-share="twitter">
+							<i class="fa fa-twitter fa-lg"></i> Twitter
+				  </li>
+					  <li class="list-group-item" data-share="googleplus">
+						<i class="fa fa-google-plus fa-lg"></i> Google+
+					  </li>
+					  <li class="list-group-item" data-share="facebook">
+					  	<i class="fa fa-facebook-square fa-lg"></i>
+					  	Facebook
+					  </li>
+					</ul>
+		      </div>
+		    </div>
+		  </div>
+		</div><!-- End Modal -->
+
+		<!-- TopBar -->
+		<div class="topbar">
+			<div class="col-xs-22 pull-left">
+				<div class="actionbutton icon">
+				</div>
+			</div>
+			<div class="col-xs-8"></div>
+			<div class="pull-right">
+				<div class="actionbutton pull-right share" data-toggle="modal6" data-target="#myModal">
+				</div>
+			</div>
+		</div>
+		<!-- End TopBar -->
+
+		<!-- PreloaderBar -->
+		<div class="preloader-bar">
+			<div class="preloader-chunk chunk-17percent">
+				<div class="preloader-chunk chunk-small"></div>
+			</div>
+			<div class="preloader-chunk chunk-31percent">
+				<div class="preloader-chunk chunk-small-middle"></div>
+			</div>
+			<div class="preloader-chunk chunk-52percent">
+				<div class="preloader-chunk chunk-small-last"></div>
+			</div>
+		</div>
+		<!-- End PreloaderBar -->
+
+		<!-- Landing Page -->
+		<div class="landing-page-container">
+			<div class="tweet-hero">
+			</div>
+			<div class="text-hero">
+				<p>It's not just another </br><span>TTS</span> Demo!!!</p>
+			</div>
+			<div class="non-supported-browser hidden">
+				<p>Sorry, Your browser don't </br>support <span><a href="http://en.wikipedia.org/wiki/Text-To-Speech">TTS</a>	</span></p>
+				<div class="unhappy-face">
+				</div>
+				<p class='secondary-text'>Try with <a href="https://www.google.com/intl/en-419/chrome/browser/">Google Chrome</a> please</p>
+			</div>
+		</div>
+		<!-- End Landing Page -->
+
+		<!-- Main Page -->	
+		<div class="containerx hidden">
+			<a class="twitter-timeline" href="https://twitter.com/dariel_noel/frontend-interesting" data-widget-id="447106514474377216" height="600">Tweets de https://twitter.com/dariel_noel/frontend-up-to-date</a>		
+		</div>
+		<!-- End Main Page -->
+
+		<!-- Bottom bar -->
+		<nav class="navbar navbar-bottom navbar-default navbar-fixed-bottom hidden" role="navigation">
+  			<div class="container action-button">
+  				<div class="row">
+  					<div class="col-xs-2 col-md-4"></div>
+  					<div class="col-xs-8 col-md-3">
+  						<div class="col-xs-3 col-md-3">
+	  						<div class="previous pull-left action-button">
+	  							<span class="glyphicon glyphicon-step-backward"></span>
+	  						</div>
+  						</div>
+  						<div class="col-xs-6 col-md-6">
+	  						<div class="rewind action-button">
+	  							<span class="glyphicon glyphicon-home"></span>
+	  						</div>
+	  					</div>
+	  					<div class="col-xs-3 col-md-3">
+	  						<div class="next pull-right action-button">
+	  							<span class="glyphicon glyphicon-step-forward"></span>
+	  						</div>
+  						</div>
+  					</div>
+  					<div class="col-xs-2 col-md-4"></div>
+  				</div>
+  			</div>
+		</nav>
+		<!-- End BottomBar -->
+
+	   <script src="lib/jquery/jquery.js"></script>
+	    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="conf/yuiconf.js"></script>
+        <script type="text/javascript" src="../../framework/yui3/3.11.0/build/yui/yui-min.js"></script>
+		<script type="text/javascript" src="conf/appconf.js"></script>
+		<script type="text/javascript" src="script/app.js"></script>
+	</body>
+</html>

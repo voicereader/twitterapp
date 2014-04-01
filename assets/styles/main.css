@@ -1,0 +1,405 @@
+/*General css*/
+ .containerx {
+    max-width:520px;
+    margin:0 auto;
+    opacity:0;
+}
+/*Topbar*/
+ .topbar {
+    background-color:#f5f5f5;
+    border-color:#f5f5f5;
+    height:45px;
+}
+/*Icono de la aplicacion*/
+ .topbar .icon {
+    background-image:url('../images/icon.svg');
+    background-repeat:no-repeat;
+    background-position:center;
+}
+/*Botones que pueden tener acciones asociadas*/
+ .topbar .actionbutton {
+    padding:6.5px 0px 9px 6.5px;
+    height:45px;
+    width:45px;
+    cursor:pointer;
+}
+/*Boton de compartir*/
+ .topbar .share {
+    background-image:url('../images/share.svg');
+    background-repeat:no-repeat;
+    background-position:center;
+    /*animation*/
+    -webkit-animation:bounceAround 1.1s ease-in-out infinite;
+    -moz-animation:bounceAround 1.1s ease-in-out infinite;
+    -ms-animation:bounceAround 1.1s ease-in-out infinite;
+    -o-animation:bounceAround 1.1s ease-in-out infinite;
+    animation:bounceAround 1.1s ease-in-out infinite;
+    /*animation-duration*/
+    -webkit-animation-duration:8s;
+    -moz-animation-duration:8s;
+    -ms-animation-duration:8s;
+    -o-animation-duration:8s;
+    animation-duration:8s;
+    /*animation-delay*/
+    -webkit-animation-delay:2.0s;
+    -moz-animation-delay:2.0s;
+    -ms-animation-delay:2.0s;
+    -o-animation-delay:2.0s;
+    animation-delay:2.0s;
+    -webkit-iteration-count:infinite;
+}
+/*Animacion de dar vueltas*/
+ @-webkit-keyframes bounceAround {
+    90%, 93% {
+        -webkit-transform:translateY(0px) rotate(0deg);
+    }
+    97% {
+        /*transform*/
+        -webkit-transform:translateY(-10px) rotate(0deg);
+        -moz-transform:translateY(-10px) rotate(0deg);
+        -ms-transform:translateY(-10px) rotate(0deg);
+        -o-transform:translateY(-10px) rotate(0deg);
+        transform:translateY(-10px) rotate(0deg);
+    }
+    100% {
+        /*transform*/
+        -webkit-transform:translateY(-10px) rotate(360deg);
+        -moz-transform:translateY(-10px) rotate(360deg);
+        -ms-transform:translateY(-10px) rotate(360deg);
+        -o-transform:translateY(-10px) rotate(360deg);
+        transform:translateY(-10px) rotate(360deg);
+    }
+}
+/*Clase que se utiliza para simular el hover: en touch devices*/
+ .topbar .touch-hover-image {
+    /*animation*/
+    -webkit-animation:hoverImageButton 1.1s;
+    -moz-animation:hoverImageButton 1.1s;
+    -ms-animation:hoverImageButton 1.1s;
+    -o-animation:hoverImageButton 1.1s;
+    animation:hoverImageButton 1.1s;
+    /*animation-duration*/
+    -webkit-animation-duration:0.15s;
+    -moz-animation-duration:0.15s;
+    -ms-animation-duration:0.15s;
+    -o-animation-duration:0.15s;
+    animation-duration:0.15s;
+    /*transition-timing-function*/
+    -webkit-transition-timing-function:linear;
+    -moz-transition-timing-function:linear;
+    -o-transition-timing-function:linear;
+    transition-timing-function:linear;
+}
+/*Animacion hover: para el boton de compartir*/
+ @-webkit-keyframes hoverImageButton {
+    20% {
+        background-image:url('../images/sharehover.svg');
+        background-color:#55acee;
+    }
+    100% {
+        background-image:url('../images/sharehover.svg');
+        background-color:#55acee;
+    }
+}
+/*End Topbar*/
+
+/*Share modal*/
+ .modal {
+    overflow:hidden;
+    overflow-y:hidden;
+    color:#999;
+}
+.modal-body {
+    padding:0px 0px 20px 0px;
+}
+.modal-body ul {
+    list-style-type:none;
+}
+.modal-dialog {
+    padding-top:98px;
+    width:225px;
+}
+body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom {
+    margin-right:0px;
+}
+.modal-body .list-group-item:hover {
+    background-color:#55acee;
+    color:white;
+    cursor:pointer;
+}
+/*End Share modal*/
+
+/*Botomm bar*/
+
+/*Se sobreescriben valores por defecto de bootstrap*/
+ .navbar-default {
+    background-color:#f5f5f5;
+    border-color:#f5f5f5;
+}
+.navbar-bottom {
+    text-align:center;
+    font-size:18px;
+    color:#8899a6;
+    min-height:0px;
+    /* approximate max height */
+    /*transition-property*/
+    -webkit-transition-property:all;
+    -moz-transition-property:all;
+    -o-transition-property:all;
+    transition-property:all;
+    /*transition-duration*/
+    -webkit-transition-duration:.5s;
+    -moz-transition-duration:.5s;
+    -o-transition-duration:.5s;
+    transition-duration:.5s;
+}
+/*Se utiliza en la animacion de esconder el botomm bar*/
+ .slide-hide {
+    min-height:0px;
+    height:0px;
+}
+/*Se utiliza en la animacion de mostrar el botomm bar*/
+ .slide-bottonbar-show {
+    min-height:45px;
+    height:45px;
+}
+/*botones de la barra inferior*/
+ .navbar-bottom .previous, .navbar-bottom .next, .navbar-bottom .rewind {
+    width:45px;
+    height:45px;
+    padding:13px 10px 13px 12px;
+}
+/*Boton de empezar de nuevo*/
+ .navbar-bottom .rewind {
+    margin:0 auto;
+    font-size:22px;
+    padding-top:9px;
+    padding-left:8px;
+}
+/*Se simula el evento hover: en touch devices*/
+ .navbar-bottom .touch-hover {
+    /*animation*/
+    -webkit-animation:hoverButton 1.1s;
+    -moz-animation:hoverButton 1.1s;
+    -ms-animation:hoverButton 1.1s;
+    -o-animation:hoverButton 1.1s;
+    animation:hoverButton 1.1s;
+    /*animation-duration*/
+    -webkit-animation-duration:0.15s;
+    -moz-animation-duration:0.15s;
+    -ms-animation-duration:0.15s;
+    -o-animation-duration:0.15s;
+    animation-duration:0.15s;
+    /*transition-timing-function*/
+    -webkit-transition-timing-function:linear;
+    -moz-transition-timing-function:linear;
+    -o-transition-timing-function:linear;
+    transition-timing-function:linear;
+}
+@-webkit-keyframes hoverButton {
+    20% {
+        background-color: #55acee;
+        color:white;
+    }
+    50% {
+        background-color: #55acee;
+        color:white;
+    }
+    100% {
+        background-color: #55acee;
+        color:white;
+    }
+}
+/*End bottom bar*/
+
+/*landing-page*/
+
+/*Preloader bar*/
+ .preloader-bar {
+    height:3px;
+    width:100%;
+    background-color:white;
+    position:relative;
+    display:block;
+}
+.preloader-bar .preloader-chunk {
+    height:3px;
+    width:25%;
+    display:inline-block;
+    float:left;
+    /*transition*/
+    -webkit-transition:all 0.2s ease-out;
+    -moz-transition:all 0.2s ease-out;
+    -o-transition:all 0.2s ease-out;
+    transition:all 0.2s ease-out;
+}
+.preloader-bar .chunk-17percent {
+    width:17%;
+    background-color:#55acee;
+}
+.preloader-bar .chunk-31percent {
+    width:31%;
+    background-color:#ffd350;
+}
+.preloader-bar .chunk-52percent {
+    width:52%;
+    background-color:#ff8250;
+}
+.preloader-bar .chunk-small {
+    width:4px;
+    background-color:white;
+    /*animation*/
+    -webkit-animation:chunkLoading1 infinite;
+    -moz-animation:chunkLoading1 infinite;
+    -ms-animation:chunkLoading1 infinite;
+    -o-animation:chunkLoading1 infinite;
+    animation:chunkLoading1 infinite;
+    /*animation-duration*/
+    -webkit-animation-duration:1.5s;
+    -moz-animation-duration:1.5s;
+    -ms-animation-duration:1.5s;
+    -o-animation-duration:1.5s;
+    animation-duration:1.5s;
+    /*transition-timing-function*/
+    -webkit-transition-timing-function:ease-in-out;
+    -moz-transition-timing-function:ease-in-out;
+    -o-transition-timing-function:ease-in-out;
+    transition-timing-function:ease-in-out;
+}
+.preloader-bar .chunk-small-middle {
+    width:4px;
+    background-color:white;
+    /*animation*/
+    -webkit-animation:chunkLoading1 infinite;
+    -moz-animation:chunkLoading1 infinite;
+    -ms-animation:chunkLoading1 infinite;
+    -o-animation:chunkLoading1 infinite;
+    animation:chunkLoading1 infinite;
+    /*animation-duration*/
+    -webkit-animation-duration:1.5s;
+    -moz-animation-duration:1.5s;
+    -ms-animation-duration:1.5s;
+    -o-animation-duration:1.5s;
+    animation-duration:1.5s;
+    /*transition-timing-function*/
+    -webkit-transition-timing-function:ease-in-out;
+    -moz-transition-timing-function:ease-in-out;
+    -o-transition-timing-function:ease-in-out;
+    transition-timing-function:ease-in-out;
+}
+.preloader-bar .chunk-small-last {
+    width:4px;
+    background-color:white;
+    /*animation*/
+    -webkit-animation:chunkLoading2 1.1s infinite;
+    -moz-animation:chunkLoading2 1.1s infinite;
+    -ms-animation:chunkLoading2 1.1s infinite;
+    -o-animation:chunkLoading2 1.1s infinite;
+    animation:chunkLoading2 1.1s infinite;
+    /*animation-duration*/
+    -webkit-animation-duration:1.5s;
+    -moz-animation-duration:1.5s;
+    -ms-animation-duration:1.5s;
+    -o-animation-duration:1.5s;
+    animation-duration:1.5s;
+    /*transition-timing-function*/
+    -webkit-transition-timing-function:ease-in-out;
+    -moz-transition-timing-function:ease-in-out;
+    -o-transition-timing-function:ease-in-out;
+    transition-timing-function:ease-in-out;
+}
+@-webkit-keyframes chunkLoading1 {
+    100% {
+        margin-left: 94%;
+    }
+}
+@-webkit-keyframes chunkLoading2 {
+    100% {
+        margin-left: 96%;
+    }
+}
+/*End prelaoder bar*/
+ .landing-page-container {
+    width:100%;
+    /*transition*/
+    -webkit-transition:all 0.2s ease-out;
+    -moz-transition:all 0.2s ease-out;
+    -o-transition:all 0.2s ease-out;
+    transition:all 0.2s ease-out;
+}
+/*El tweet que sale en el landing page*/
+ .tweet-hero {
+    height:130px;
+    margin:0 auto;
+    margin-top:40px;
+    min-width:240px;
+    width:60%;
+    background-image:url('../images/tweet.svg');
+    background-repeat:no-repeat;
+    background-position:center;
+    /*background-size*/
+    -webkit-background-size:
+    /*@@prefixmycss->No equivalent*/
+    ;
+    -moz-background-size:contain;
+    -o-background-size:
+    /*@@prefixmycss->No equivalent*/
+    ;
+    background-size:contain;
+}
+/*texto inicial*/
+ .text-hero {
+    margin-top:60px;
+    text-align:center;
+    font-size:200%;
+    color:#999999;
+}
+.text-hero span {
+    color:#ff8250;
+}
+.non-supported-browser {
+    margin-top:60px;
+    text-align:center;
+    font-size:150%;
+    color:#999999;
+}
+.non-supported-browser .unhappy-face {
+    background-image:url('../images/unhappy.svg');
+    width:73px;
+    height:71px;
+    margin:0 auto;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.non-supported-browser i {
+    font-size:300%;
+}
+.secondary-text {
+    font-size:80%;
+    margin-top:10px;
+}
+/*transiciones landing page*/
+ .preloader-bar .slide-up-trans {
+    height:0px;
+}
+.preloader-bar .fade-out-trans {
+    opacity:0;
+}
+/*Custom devices*/
+ @media screen and (min-device-width:1024px) {
+    .navbar-bottom .previous:hover, .navbar-bottom .next:hover, .navbar-bottom .rewind:hover {
+        background-color: #55acee;
+        color:white;
+        cursor:pointer;
+    }
+    .topbar .actionbutton:hover {
+        background-color:#55acee;
+        color:white;
+    }
+    .topbar .share:hover {
+        background-image:url('../images/sharehover.svg');
+    }
+    .topbar .icon:hover {
+        background-image:url('../images/iconhover.svg');
+    }
+}

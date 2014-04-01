@@ -1,0 +1,1 @@
+YUI_config={useBrowserConsole:!0,filter:"min",logExclude:{},debug:!0,groups:{},lang:"en-US"};
