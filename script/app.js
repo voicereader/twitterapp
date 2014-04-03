@@ -362,6 +362,8 @@ YUI().use(
                 url = 'https://plus.google.com/share?url=http%3A%2F%2Fvoicereader.github.io%2F'
             } else if (shareBehavior === 'facebook') {
                 url = 'https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fvoicereader.github.io';
+            } else if (shareBehavior === 'github') {
+                url = 'https://github.com/voicereader/twitterapp';
             }
 
             if (url !== '') {
